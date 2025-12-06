@@ -1,0 +1,249 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Main layout */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem 3rem;
+}
+
+/* Search section */
+.search-section {
+  margin-bottom: 2rem;
+  background: #111827;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #1f2937;
+}
+
+.search-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.search-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#cityInput {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+#cityInput:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+#searchButton {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #38bdf8;
+  color: #020617;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease,
+    background 0.1s ease;
+}
+
+#searchButton:hover {
+  background: #0ea5e9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.8);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* Error message area */
+.error {
+  margin-top: 0.5rem;
+  color: #f97373;
+  min-height: 1.2rem;
+}
+
+/* Weather card (filled in by JavaScript) */
+.weather-card {
+  background: #111827;
+  border-radius: 0.75rem;
+  border: 1px solid #1f2937;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.weather-card.hidden {
+  display: none;
+}
+
+.weather-card:not(.hidden) {
+  transform: translateY(0);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.5);
+}
+
+.weather-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+#weatherDescription {
+  color: #9ca3af;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+/* Main weather layout: temperature + icon side by side */
+.weather-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.temp-block {
+  flex: 1;
+}
+
+.temp {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.feels-like {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.icon-block {
+  width: 100px;
+  height: 100px;
+}
+
+.icon-block img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Extra weather info grid (humidity, wind, sunrise, sunset) */
+.weather-extra {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Recent searches list ("Take it further" feature) */
+.recent-searches {
+  margin-top: 1rem;
+  border-top: 1px solid #1f2937;
+  padding-top: 0.75rem;
+}
+
+.recent-searches.hidden {
+  display: none;
+}
+
+.recent-searches h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #e5e7eb;
+}
+
+.recent-searches ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.recent-searches button {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.recent-searches button:hover {
+  border-color: #38bdf8;
+}
+
+/* Documentation / attribution section */
+.docs-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #020617;
+  border-radius: 0.75rem;
+  border: 1px solid #1f2937;
+}
+
+.docs-section h2 {
+  margin-bottom: 0.75rem;
+}
+
+.docs-section a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.docs-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #6b7280;
+  font-size: 0.85rem;
+  border-top: 1px solid #1f2937;
+  background: #020617;
+}

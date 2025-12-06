@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Dashboard - OpenWeatherMap API Demo</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+
+  <header>
+    <h1>Weather Dashboard</h1>
+    <p>
+      A simple and easy-to-use demonstration of the
+      <strong>OpenWeatherMap Current Weather Data API</strong>
+      using JavaScript, fetch, and JSON.
+    </p>
+  </header>
+
+  <main>
+    
+    <section class="search-section">
+      <label for="cityInput">Enter a city name:</label>
+      <div class="search-row">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="e.g. Barrie, Toronto, Mumbai"
+        />
+        <button id="searchButton">Get Weather</button>
+      </div>
+      <p class="hint">
+        Type a city and click "Get Weather". The data is loaded from the OpenWeatherMap API.
+      </p>
+      <p id="errorMessage" class="error"></p>
+
+      
+      <div id="recentSearches" class="recent-searches hidden">
+        <h3>Recent searches</h3>
+        <ul id="recentList"></ul>
+      </div>
+    </section>
+
+
+    <section id="weatherCard" class="weather-card hidden">
+      <h2 id="cityName"></h2>
+      <p id="weatherDescription"></p>
+
+      <div class="weather-main">
+        <div class="temp-block">
+          <p class="temp" id="temperature"></p>
+          <p class="feels-like" id="feelsLike"></p>
+        </div>
+        <div class="icon-block">
+          <img id="weatherIcon" alt="Weather icon" />
+        </div>
+      </div>
+
+      <div class="weather-extra">
+        <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+        <p><strong>Wind speed:</strong> <span id="windSpeed"></span></p>
+        <p><strong>Sunrise:</strong> <span id="sunrise"></span></p>
+        <p><strong>Sunset:</strong> <span id="sunset"></span></p>
+      </div>
+    </section>
+
+    <section class="docs-section">
+      <h2>API Documentation & Attribution</h2>
+      <p>
+        This assignment uses the
+        <a
+          href="https://openweathermap.org/current"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OpenWeatherMap Current Weather Data API
+        </a>.
+      </p>
+      <p>
+        Instructions for obtaining and using an API key were followed from:
+        <a
+          href="https://openweathermap.org/appid"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OpenWeatherMap - How to start
+        </a>.
+      </p>
+      <p>
+        All weather data, icons, and JSON response fields are provided by OpenWeatherMap.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 3 - Third-Party APIs - Akarsh Krishna Dinesh</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
